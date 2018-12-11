@@ -2,6 +2,9 @@
 Changelog for package qt_gui
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.1 (2018-12-11)
+------------------
+
 1.0.0 (2018-12-10)
 ------------------
 * fix warning message (`#143 <https://github.com/ros-visualization/qt_gui_core/issues/143>`_)

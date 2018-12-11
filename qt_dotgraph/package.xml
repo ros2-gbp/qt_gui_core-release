@@ -1,6 +1,6 @@
 <package format="2">
   <name>qt_dotgraph</name>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <description>
     qt_dotgraph provides helpers to work with dot graphs.
   </description>
@@ -23,4 +23,8 @@
   <test_depend>ament_lint_common</test_depend>
 
   <test_depend>python3-pygraphviz</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>
