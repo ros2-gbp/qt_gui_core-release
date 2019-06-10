@@ -2,6 +2,9 @@
 Changelog for package qt_dotgraph
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.6 (2019-06-10)
+------------------
+
 1.0.4 (2019-02-08)
 ------------------
 * skip pydot/pygraphviz tests when unavailable (`#161 <https://github.com/ros-visualization/qt_gui_core/issues/161>`_)
