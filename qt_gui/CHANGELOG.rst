@@ -2,6 +2,10 @@
 Changelog for package qt_gui
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.6 (2019-06-10)
+------------------
+* add missing QtCore import (`#178 <https://github.com/ros-visualization/qt_gui_core/issues/178>`_)
+
 1.0.4 (2019-02-08)
 ------------------
 * fix dictionary changes size during iteration (`#166 <https://github.com/ros-visualization/qt_gui_core/issues/166>`_)
