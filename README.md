@@ -1,3 +1,32 @@
+## qt_gui_core (foxy) - 1.1.0-1
+
+The packages in the `qt_gui_core` repository were released into the `foxy` distro by running `/usr/bin/bloom-release --rosdistro foxy --track foxy qt_gui_core` on `Wed, 27 May 2020 15:41:38 -0000`
+
+These packages were released:
+- `qt_dotgraph`
+- `qt_gui`
+- `qt_gui_app`
+- `qt_gui_core`
+- `qt_gui_cpp`
+- `qt_gui_py_common`
+
+Version of package(s) in repository `qt_gui_core`:
+
+- upstream repository: https://github.com/ros-visualization/qt_gui_core.git
+- release repository: https://github.com/ros2-gbp/qt_gui_core-release.git
+- rosdistro version: `1.0.8-1`
+- old version: `1.0.8-1`
+- new version: `1.1.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.7`
+- catkin_pkg version: `0.4.20`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.1`
+- vcstools version: `0.1.42`
+
+
 ## qt_gui_core (foxy) - 1.0.8-1
 
 The packages in the `qt_gui_core` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy qt_gui_core` on `Wed, 06 May 2020 01:10:27 -0000`
