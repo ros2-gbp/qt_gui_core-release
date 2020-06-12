@@ -1,0 +1,12 @@
+Source: ros-dashing-qt-gui-app
+Section: misc
+Priority: optional
+Maintainer: Dirk Thomas <dthomas@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-dashing-ament-cmake, ros-dashing-ament-lint-auto, ros-dashing-ament-lint-common, ros-dashing-ros-workspace
+Homepage: http://ros.org/wiki/qt_gui_app
+Standards-Version: 3.9.2
+
+Package: ros-dashing-qt-gui-app
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-dashing-ament-index-python, ros-dashing-qt-gui, ros-dashing-ros-workspace
+Description: qt_gui_app provides the main to start an instance of the integrated graphical user interface provided by qt_gui.
