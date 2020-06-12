@@ -2,11 +2,6 @@
 Changelog for package qt_gui_cpp
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.1.0 (2020-05-27)
-------------------
-* Use ament_target_dependencies for qt_gui_cpp. (`#221 <https://github.com/ros-visualization/qt_gui_core/issues/221>`_)
-* Contributors: Chris Lalancette
-
 1.0.9 (2020-05-26)
 ------------------
 
