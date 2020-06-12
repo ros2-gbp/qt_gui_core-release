@@ -1,0 +1,12 @@
+Source: ros-dashing-qt-dotgraph
+Section: misc
+Priority: optional
+Maintainer: Dirk Thomas <dthomas@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), python3-pygraphviz, ros-dashing-ament-cmake, ros-dashing-ament-cmake-pytest, ros-dashing-ament-lint-auto, ros-dashing-ament-lint-common, ros-dashing-ros-workspace
+Homepage: http://ros.org/wiki/qt_dotgraph
+Standards-Version: 3.9.2
+
+Package: ros-dashing-qt-dotgraph
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-pydot, ros-dashing-python-qt-binding (>= 0.3.0), ros-dashing-ros-workspace
+Description: qt_dotgraph provides helpers to work with dot graphs.
