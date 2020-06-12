@@ -1,0 +1,12 @@
+Source: ros-eloquent-qt-gui-py-common
+Section: misc
+Priority: optional
+Maintainer: Dorian Scholz <scholz@sim.tu-darmstadt.de>
+Build-Depends: debhelper (>= 9.0.0), ros-eloquent-ament-cmake, ros-eloquent-ament-lint-auto, ros-eloquent-ament-lint-common, ros-eloquent-ros-workspace
+Homepage: http://ros.org/wiki/qt_gui_py_common
+Standards-Version: 3.9.2
+
+Package: ros-eloquent-qt-gui-py-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-eloquent-ament-index-python, ros-eloquent-python-qt-binding, ros-eloquent-ros-workspace
+Description: qt_gui_py_common provides common functionality for GUI plugins written in Python.
