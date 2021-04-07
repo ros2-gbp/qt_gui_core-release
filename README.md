@@ -1,3 +1,32 @@
+## qt_gui_core (rolling) - 2.0.0-4
+
+The packages in the `qt_gui_core` repository were released into the `rolling` distro by running `/home/cottsay/.local/bin/bloom-release qt_gui_core -r rolling` on `Wed, 07 Apr 2021 23:39:28 -0000`
+
+These packages were released:
+- `qt_dotgraph`
+- `qt_gui`
+- `qt_gui_app`
+- `qt_gui_core`
+- `qt_gui_cpp`
+- `qt_gui_py_common`
+
+Version of package(s) in repository `qt_gui_core`:
+
+- upstream repository: https://github.com/ros-visualization/qt_gui_core.git
+- release repository: https://github.com/ros2-gbp/qt_gui_core-release.git
+- rosdistro version: `2.0.0-3`
+- old version: `2.0.0-3`
+- new version: `2.0.0-4`
+
+Versions of tools used:
+
+- bloom version: `0.10.6`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.20.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## qt_gui_core (rolling) - 2.0.0-3
 
 The packages in the `qt_gui_core` repository were released into the `rolling` distro by running `/home/cottsay/.local/bin/bloom-release qt_gui_core -r rolling` on `Thu, 11 Mar 2021 21:17:59 -0000`
