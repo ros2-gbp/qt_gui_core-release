@@ -2,12 +2,7 @@
 Changelog for package qt_gui
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.0.1 (2021-04-29)
-------------------
-* Always prefer 'Tango' icon theme (`#250 <https://github.com/ros-visualization/qt_gui_core/issues/250>`_)
-* Contributors: Scott K Logan
-
-2.0.0 (2021-01-26)
+1.1.3 (2021-08-31)
 ------------------
 * Fix 'dict_keys' object not subscriptable (`#243 <https://github.com/ros-visualization/qt_gui_core/issues/243>`_)
 * Contributors: Michael Jeronimo
