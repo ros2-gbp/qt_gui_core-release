@@ -1,1 +1,1 @@
-{"base": "0796076", "parent": "debian/rolling/qt_gui_cpp", "previous": "15d92cd", "trim": "", "trimbase": ""}
+{"base": "d154375", "parent": "debian/humble/qt_gui_cpp", "previous": "ae8fa1d", "trim": "", "trimbase": ""}
