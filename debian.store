@@ -1,1 +1,1 @@
-{"base": "17c16a3", "parent": "debian/rolling/qt_dotgraph", "previous": "77a72f4", "trim": "", "trimbase": ""}
+{"base": "75d800f", "parent": "debian/humble/qt_dotgraph", "previous": "9502649", "trim": "", "trimbase": ""}
