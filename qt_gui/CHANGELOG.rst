@@ -2,7 +2,7 @@
 Changelog for package qt_gui
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.3.0 (2022-05-10)
+2.2.1 (2022-05-10)
 ------------------
 * Fix flake8 errors introduced by the previous commit. (`#262 <https://github.com/ros-visualization/qt_gui_core/issues/262>`_)
 * Enable basic help information if no plugins are running (`#261 <https://github.com/ros-visualization/qt_gui_core/issues/261>`_)
