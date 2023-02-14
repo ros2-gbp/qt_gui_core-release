@@ -2,6 +2,11 @@
 Changelog for package qt_gui_cpp
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.4.0 (2023-02-14)
+------------------
+* Conditionally run import tests when generators are built (`#269 <https://github.com/ros-visualization/qt_gui_core/issues/269>`_)
+* Contributors: Scott K Logan
+
 2.3.2 (2022-11-02)
 ------------------
 * Add in LICENSE file
