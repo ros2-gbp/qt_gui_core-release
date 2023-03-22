@@ -174,4 +174,5 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/ros-visualization/qt_gui_core.git
-    version: :{auto}
+    version: 2.4.0
+    version_saved: :{auto}
