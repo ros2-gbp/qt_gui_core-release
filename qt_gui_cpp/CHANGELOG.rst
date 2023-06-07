@@ -2,10 +2,13 @@
 Changelog for package qt_gui_cpp
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.4.2 (2023-05-19)
+2.6.0 (2023-06-07)
 ------------------
-* Fix ClassLoader warning by unloading plugin providers. (`#275 <https://github.com/ros-visualization/qt_gui_core/issues/275>`_)
-* Chen Lihui
+* fix unload warning (`#274 <https://github.com/ros-visualization/qt_gui_core/issues/274>`_)
+* Contributors: Chen Lihui
+
+2.5.0 (2023-04-28)
+------------------
 
 2.4.1 (2023-04-11)
 ------------------
