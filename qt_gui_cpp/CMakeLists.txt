@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.12)
 project(qt_gui_cpp)
 
-# Default to C++17
+# Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 17)
-  set(CMAKE_CXX_STANDARD_REQUIRED ON)
+  set(CMAKE_CXX_STANDARD 14)
 endif()
 
 find_package(ament_cmake REQUIRED)
