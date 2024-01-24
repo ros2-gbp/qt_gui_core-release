@@ -2,26 +2,15 @@
 Changelog for package qt_dotgraph
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.4.2 (2023-05-19)
+2.2.3 (2024-01-24)
 ------------------
 
-2.4.1 (2023-04-11)
+2.2.2 (2022-08-15)
 ------------------
+* Cast drawLine input arguments to int (`#264 <https://github.com/ros-visualization/qt_gui_core/issues/264>`_)
+* Contributors: Samuel Lindgren
 
-2.4.0 (2023-02-14)
-------------------
-
-2.3.2 (2022-11-02)
-------------------
-* Add in LICENSE file
-* Contributors: Chris Lalancette
-
-2.3.1 (2022-08-15)
-------------------
-* Cast drawLine input arguments to int (`#264 <https://github.com/ros-visualization/qt_gui_core/issues/264>`_) (`#265 <https://github.com/ros-visualization/qt_gui_core/issues/265>`_)
-* Contributors: mergify[bot]
-
-2.3.0 (2022-05-10)
+2.2.1 (2022-05-10)
 ------------------
 
 2.2.0 (2022-03-01)
