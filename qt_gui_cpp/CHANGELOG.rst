@@ -2,13 +2,33 @@
 Changelog for package qt_gui_cpp
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.2.3 (2024-01-24)
+2.4.3 (2024-02-07)
 ------------------
 
-2.2.2 (2022-08-15)
+2.4.2 (2023-05-19)
+------------------
+* Fix ClassLoader warning by unloading plugin providers. (`#275 <https://github.com/ros-visualization/qt_gui_core/issues/275>`_)
+* Chen Lihui
+
+2.4.1 (2023-04-11)
+------------------
+* fix shiboken error (`#267 <https://github.com/ros-visualization/qt_gui_core/issues/267>`_)
+* Contributors: Christoph Hellmann Santos, Michael Carroll, Rhys Mainwaring
+
+2.4.0 (2023-02-14)
+------------------
+* Conditionally run import tests when generators are built (`#269 <https://github.com/ros-visualization/qt_gui_core/issues/269>`_)
+* Contributors: Scott K Logan
+
+2.3.2 (2022-11-02)
+------------------
+* Add in LICENSE file
+* Contributors: Chris Lalancette
+
+2.3.1 (2022-08-15)
 ------------------
 
-2.2.1 (2022-05-10)
+2.3.0 (2022-05-10)
 ------------------
 
 2.2.0 (2022-03-01)

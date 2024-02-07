@@ -2,15 +2,29 @@
 Changelog for package qt_gui
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.2.3 (2024-01-24)
+2.4.3 (2024-02-07)
 ------------------
-* (qt_gui) extended theme logic to get icons (`#280 <https://github.com/ros-visualization/qt_gui_core/issues/280>`_)
+* Extended theme logic to get icons (`#281 <https://github.com/ros-visualization/qt_gui_core/issues/281>`_)
 * Contributors: Matthijs van der Burgh
 
-2.2.2 (2022-08-15)
+2.4.2 (2023-05-19)
 ------------------
 
-2.2.1 (2022-05-10)
+2.4.1 (2023-04-11)
+------------------
+
+2.4.0 (2023-02-14)
+------------------
+
+2.3.2 (2022-11-02)
+------------------
+* Add in LICENSE file
+* Contributors: Chris Lalancette
+
+2.3.1 (2022-08-15)
+------------------
+
+2.3.0 (2022-05-10)
 ------------------
 * Fix flake8 errors introduced by the previous commit. (`#262 <https://github.com/ros-visualization/qt_gui_core/issues/262>`_)
 * Enable basic help information if no plugins are running (`#261 <https://github.com/ros-visualization/qt_gui_core/issues/261>`_)
