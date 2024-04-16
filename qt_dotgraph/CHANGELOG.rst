@@ -2,6 +2,11 @@
 Changelog for package qt_dotgraph
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.7.4 (2024-04-16)
+------------------
+* Handle empty dotcode nodes. (`#290 <https://github.com/ros-visualization/qt_gui_core/issues/290>`_)
+* Contributors: Chris Lalancette
+
 2.7.3 (2024-03-28)
 ------------------
 * Small fix for modern flake8. (`#289 <https://github.com/ros-visualization/qt_gui_core/issues/289>`_)
