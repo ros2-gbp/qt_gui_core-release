@@ -1,0 +1,12 @@
+Source: ros-rolling-qt-gui-app
+Section: misc
+Priority: optional
+Maintainer: Dirk Thomas <dthomas@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-ros-workspace
+Homepage: http://ros.org/wiki/qt_gui_app
+Standards-Version: 3.9.2
+
+Package: ros-rolling-qt-gui-app
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-ament-index-python, ros-rolling-qt-gui, ros-rolling-ros-workspace
+Description: qt_gui_app provides the main to start an instance of the integrated graphical user interface provided by qt_gui.
