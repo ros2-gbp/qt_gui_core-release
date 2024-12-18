@@ -5,7 +5,7 @@ class Plugin
   : QObject
 {
 %TypeHeaderCode
-#include <qt_gui_cpp/plugin.hpp>
+#include <qt_gui_cpp/plugin.h>
 %End
 
 public:

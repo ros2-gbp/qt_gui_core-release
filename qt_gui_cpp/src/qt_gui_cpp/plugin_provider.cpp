@@ -30,10 +30,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <qt_gui_cpp/plugin_provider.hpp>
+#include <qt_gui_cpp/plugin_provider.h>
 
-namespace qt_gui_cpp
-{
+namespace qt_gui_cpp {
 
 PluginProvider::PluginProvider()
 {}
@@ -41,15 +40,14 @@ PluginProvider::PluginProvider()
 PluginProvider::~PluginProvider()
 {}
 
-QMap<QString, QString> PluginProvider::discover(QObject * discovery_data)
+QMap<QString, QString> PluginProvider::discover(QObject* discovery_data)
 {
   QMultiMap<QString, QString> plugins;
-  QList<PluginDescriptor *> descriptors = discover_descriptors(discovery_data);
-  for (QList<PluginDescriptor *>::iterator it = descriptors.begin(); it != descriptors.end();
-    it++)
+  QList<PluginDescriptor*> descriptors = discover_descriptors(discovery_data);
+  for (QList<PluginDescriptor*>::iterator it = descriptors.begin(); it != descriptors.end(); it++)
   {
     // extract plugin descriptor dictionary
-    PluginDescriptor * descriptor = *it;
+    PluginDescriptor* descriptor = *it;
     QMap<QString, QString> plugin = descriptor->toDictionary();
     plugins.unite(plugin);
     delete descriptor;
@@ -57,29 +55,30 @@ QMap<QString, QString> PluginProvider::discover(QObject * discovery_data)
   return plugins;
 }
 
-QList<PluginDescriptor *> PluginProvider::discover_descriptors(QObject * discovery_data)
+QList<PluginDescriptor*> PluginProvider::discover_descriptors(QObject* discovery_data)
 {
-  return QList<PluginDescriptor *>();
+  return QList<PluginDescriptor*>();
 }
 
-void * PluginProvider::load(const QString & plugin_id, PluginContext * plugin_context)
+void* PluginProvider::load(const QString& plugin_id, PluginContext* plugin_context)
 {
   return load_plugin(plugin_id, plugin_context);
 }
 
-Plugin * PluginProvider::load_plugin(const QString & plugin_id, PluginContext * plugin_context)
+Plugin* PluginProvider::load_plugin(const QString& plugin_id, PluginContext* plugin_context)
 {
   return 0;
 }
 
-void PluginProvider::unload(void * plugin_instance)
+void PluginProvider::unload(void* plugin_instance)
 {}
 
-void PluginProvider::unload_plugin(Plugin * plugin_instance)
+void PluginProvider::unload_plugin(Plugin* plugin_instance)
 {
   unload(plugin_instance);
 }
 
 void PluginProvider::shutdown()
 {}
-}  // namespace qt_gui_cpp
+
+} // namespace

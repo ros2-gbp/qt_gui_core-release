@@ -30,14 +30,52 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef QT_GUI_CPP__PLUGIN_BRIDGE_H_
-#define QT_GUI_CPP__PLUGIN_BRIDGE_H_
+#ifndef qt_gui_cpp__PluginBridge_H
+#define qt_gui_cpp__PluginBridge_H
 
-// *INDENT-OFF* (prevent uncrustify from adding indention below)
-#warning Including header <qt_gui_cpp/plugin_bridge.h> is deprecated, \
-include <qt_gui_cpp/plugin_bridge.hpp> instead.
-// *INDENT-ON*
+#include <QObject>
 
-#include "./plugin_bridge.hpp"
+namespace qt_gui_cpp
+{
 
-#endif  // QT_GUI_CPP__PLUGIN_BRIDGE_H_
+class Plugin;
+class PluginContext;
+class PluginProvider;
+
+class PluginBridge
+  : public QObject
+{
+
+  Q_OBJECT
+
+public:
+
+  PluginBridge();
+
+  virtual bool load_plugin(PluginProvider* provider, const QString& plugin_id, PluginContext* plugin_context);
+
+  virtual void unload_plugin();
+
+  virtual bool has_configuration() const;
+
+  virtual void trigger_configuration();
+
+public slots:
+
+  virtual void shutdown_plugin();
+
+  virtual void save_settings(QObject* plugin_settings, QObject* instance_settings);
+
+  virtual void restore_settings(QObject* plugin_settings, QObject* instance_settings);
+
+private:
+
+  PluginProvider* provider_;
+
+  Plugin* plugin_;
+
+};
+
+} // namespace
+
+#endif // qt_gui_cpp__PluginBridge_H

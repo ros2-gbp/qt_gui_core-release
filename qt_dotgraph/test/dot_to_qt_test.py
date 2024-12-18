@@ -34,25 +34,12 @@
 # This file does not pass flake8 due to the raw string literals below.
 # flake8: noqa
 
-import importlib.machinery
 import subprocess
 import sys
 import unittest
 
-try:
-    from python_qt_binding.QtWidgets import QApplication
-    from qt_dotgraph.dot_to_qt import DotToQtGenerator, get_unquoted
-    qt_import_failed = False
-except ImportError:
-    # If this is running on a Python Windows interpreter built in debug mode, skip running tests
-    # because we do not have the debug libraries available for PyQt.  It is surprisingly tricky to
-    # discover whether the current interpreter was built in debug mode (note that this is different
-    # than running the interpreter in debug mode, i.e. PYTHONDEBUG=1).  The only non-deprecated way
-    # we've found is to look for _d.pyd in the extension suffixes, so that is what we do here.
-    if sys.platform == 'win32' and '_d.pyd' in importlib.machinery.EXTENSION_SUFFIXES:
-        qt_import_failed = True
-    else:
-        raise
+from python_qt_binding.QtWidgets import QApplication
+from qt_dotgraph.dot_to_qt import DotToQtGenerator, get_unquoted
 
 
 def check_x_server():
@@ -67,7 +54,6 @@ def check_x_server():
     return p.returncode == 0
 
 
-@unittest.skipIf(qt_import_failed, 'Skipping test on Windows Debug')
 class DotToQtGeneratorTest(unittest.TestCase):
 
     DOT_CODE = r'''
