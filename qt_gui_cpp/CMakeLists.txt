@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.12)
 project(qt_gui_cpp)
 
-# Default to C++14
+# Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 
 find_package(ament_cmake REQUIRED)
@@ -20,7 +21,6 @@ endif()
 
 find_package(pluginlib REQUIRED)
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
-find_package(rcpputils REQUIRED)
 find_package(tinyxml2_vendor REQUIRED)
 find_package(TinyXML2 REQUIRED)
 
@@ -39,9 +39,9 @@ set(qt_gui_cpp_SRCS
 )
 
 set(qt_gui_cpp_HDRS
-  include/qt_gui_cpp/plugin.h
-  include/qt_gui_cpp/plugin_bridge.h
-  include/qt_gui_cpp/plugin_context.h
+  include/qt_gui_cpp/plugin.hpp
+  include/qt_gui_cpp/plugin_bridge.hpp
+  include/qt_gui_cpp/plugin_context.hpp
 )
 
 qt5_wrap_cpp(qt_gui_cpp_MOCS ${qt_gui_cpp_HDRS})
@@ -56,7 +56,6 @@ target_link_libraries(${PROJECT_NAME}
   ${QT_QTGUI_LIBRARY}
   Qt5::Widgets
   pluginlib::pluginlib
-  rcpputils::rcpputils
   tinyxml2::tinyxml2)
 
 add_subdirectory(src/qt_gui_cpp_shiboken)
@@ -75,7 +74,7 @@ install(
   DESTINATION include/${PROJECT_NAME}
 )
 
-ament_export_dependencies(pluginlib rcpputils TinyXML2)
+ament_export_dependencies(pluginlib TinyXML2)
 ament_export_targets(export_${PROJECT_NAME} HAS_LIBRARY_TARGET)
 
 install(TARGETS ${PROJECT_NAME}
@@ -84,15 +83,23 @@ install(TARGETS ${PROJECT_NAME}
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin)
 
-# TODO(brawner) add ament_lint_auto tests here. Much of the c++ code needs to
-# be updated for ROS2 style
-
 if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
+
   find_package(ament_cmake_pytest REQUIRED)
 
-  ament_add_pytest_test(qt_gui_cpp test
-    APPEND_ENV PYTHONPATH=${CMAKE_CURRENT_BINARY_DIR}
-    TIMEOUT 90)
+  if(TARGET qt_gui_cpp_shiboken)
+    ament_add_pytest_test(qt_gui_cpp_shiboken test/test_imports_shiboken.py
+      APPEND_ENV PYTHONPATH=${CMAKE_CURRENT_BINARY_DIR}
+      TIMEOUT 90)
+  endif()
+
+  if(TARGET qt_gui_cpp_sip)
+    ament_add_pytest_test(qt_gui_cpp_sip test/test_imports_sip.py
+      APPEND_ENV PYTHONPATH=${CMAKE_CURRENT_BINARY_DIR}
+      TIMEOUT 90)
+  endif()
 endif()
 
 ament_package(CONFIG_EXTRAS cmake/${PROJECT_NAME}-extras.cmake)

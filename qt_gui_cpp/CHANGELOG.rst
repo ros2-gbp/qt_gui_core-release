@@ -2,16 +2,71 @@
 Changelog for package qt_gui_cpp
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.2.4 (2025-03-25)
+2.9.0 (2024-12-20)
 ------------------
 
-2.2.3 (2024-01-24)
+2.8.3 (2024-11-20)
 ------------------
 
-2.2.2 (2022-08-15)
+2.8.2 (2024-07-10)
+------------------
+* Add common linters and make them happy to qt_gui_cpp (`#295 <https://github.com/ros-visualization/qt_gui_core/issues/295>`_)
+* Deprecated h headers (`#294 <https://github.com/ros-visualization/qt_gui_core/issues/294>`_)
+* Contributors: Alejandro Hernández Cordero
+
+2.8.1 (2024-06-25)
 ------------------
 
-2.2.1 (2022-05-10)
+2.8.0 (2024-04-26)
+------------------
+
+2.7.4 (2024-04-16)
+------------------
+
+2.7.3 (2024-03-28)
+------------------
+* Switch from rcpputils::fs to std::filesystem (`#288 <https://github.com/ros-visualization/qt_gui_core/issues/288>`_)
+* Set hints to find the python version we actually want. (`#287 <https://github.com/ros-visualization/qt_gui_core/issues/287>`_)
+* Contributors: Chris Lalancette, Christophe Bedard
+
+2.7.2 (2024-02-07)
+------------------
+
+2.7.1 (2023-12-26)
+------------------
+
+2.7.0 (2023-08-21)
+------------------
+* Update to C++17 (`#278 <https://github.com/ros-visualization/qt_gui_core/issues/278>`_)
+* Contributors: Chris Lalancette
+
+2.6.0 (2023-06-07)
+------------------
+* fix unload warning (`#274 <https://github.com/ros-visualization/qt_gui_core/issues/274>`_)
+* Contributors: Chen Lihui
+
+2.5.0 (2023-04-28)
+------------------
+
+2.4.1 (2023-04-11)
+------------------
+* fix shiboken error (`#267 <https://github.com/ros-visualization/qt_gui_core/issues/267>`_)
+* Contributors: Christoph Hellmann Santos, Michael Carroll, Rhys Mainwaring
+
+2.4.0 (2023-02-14)
+------------------
+* Conditionally run import tests when generators are built (`#269 <https://github.com/ros-visualization/qt_gui_core/issues/269>`_)
+* Contributors: Scott K Logan
+
+2.3.2 (2022-11-02)
+------------------
+* Add in LICENSE file
+* Contributors: Chris Lalancette
+
+2.3.1 (2022-08-15)
+------------------
+
+2.3.0 (2022-05-10)
 ------------------
 
 2.2.0 (2022-03-01)
