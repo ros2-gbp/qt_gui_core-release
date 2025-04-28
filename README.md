@@ -1,3 +1,32 @@
+## qt_gui_core (kilted) - 2.9.1-1
+
+The packages in the `qt_gui_core` repository were released into the `kilted` distro by running `/home/cottsay/infra_ws/install/bloom/bin/bloom-release qt_gui_core -r kilted` on `Mon, 28 Apr 2025 21:29:29 -0000`
+
+These packages were released:
+- `qt_dotgraph`
+- `qt_gui`
+- `qt_gui_app`
+- `qt_gui_core`
+- `qt_gui_cpp`
+- `qt_gui_py_common`
+
+Version of package(s) in repository `qt_gui_core`:
+
+- upstream repository: https://github.com/ros-visualization/qt_gui_core.git
+- release repository: https://github.com/ros2-gbp/qt_gui_core-release.git
+- rosdistro version: `2.9.0-2`
+- old version: `2.9.0-2`
+- new version: `2.9.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## qt_gui_core (humble) - 2.2.4-1
 
 The packages in the `qt_gui_core` repository were released into the `humble` distro by running `/usr/bin/bloom-release -r humble -y qt_gui_core` on `Tue, 25 Mar 2025 13:12:22 -0000`
