@@ -2,16 +2,10 @@
 Changelog for package qt_gui_app
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.10.2 (2025-10-09)
--------------------
-* Fix cmake deprecations (`#307 <https://github.com/ros-visualization/qt_gui_core/issues/307>`_)
-* Contributors: mosfet80
-
-2.10.1 (2025-05-19)
--------------------
-
-2.10.0 (2025-04-28)
--------------------
+2.9.2 (2025-10-09)
+------------------
+* Fix cmake deprecations (`#307 <https://github.com/ros-visualization/qt_gui_core/issues/307>`_) (`#310 <https://github.com/ros-visualization/qt_gui_core/issues/310>`_)
+* Contributors: mergify[bot]
 
 2.9.1 (2025-04-28)
 ------------------
