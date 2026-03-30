@@ -12,18 +12,18 @@ set(qt_gui_cpp_sip_DEPENDENT_FILES
   ros_pluginlib_plugin_provider_for_plugin_providers.sip
   ros_pluginlib_plugin_provider_for_plugins.sip
   settings.sip
-  ${qt_gui_cpp_HDRS_DIR}/composite_plugin_provider.hpp
-  ${qt_gui_cpp_HDRS_DIR}/generic_proxy.hpp
-  ${qt_gui_cpp_HDRS_DIR}/plugin.hpp
-  ${qt_gui_cpp_HDRS_DIR}/plugin_bridge.hpp
-  ${qt_gui_cpp_HDRS_DIR}/plugin_context.hpp
-  ${qt_gui_cpp_HDRS_DIR}/plugin_descriptor.hpp
-  ${qt_gui_cpp_HDRS_DIR}/plugin_provider.hpp
-  ${qt_gui_cpp_HDRS_DIR}/recursive_plugin_provider.hpp
-  ${qt_gui_cpp_HDRS_DIR}/ros_pluginlib_plugin_provider.hpp
-  ${qt_gui_cpp_HDRS_DIR}/ros_pluginlib_plugin_provider_for_plugin_providers.hpp
-  ${qt_gui_cpp_HDRS_DIR}/ros_pluginlib_plugin_provider_for_plugins.hpp
-  ${qt_gui_cpp_HDRS_DIR}/settings.hpp
+  ${qt_gui_cpp_HDRS_DIR}/composite_plugin_provider.h
+  ${qt_gui_cpp_HDRS_DIR}/generic_proxy.h
+  ${qt_gui_cpp_HDRS_DIR}/plugin.h
+  ${qt_gui_cpp_HDRS_DIR}/plugin_bridge.h
+  ${qt_gui_cpp_HDRS_DIR}/plugin_context.h
+  ${qt_gui_cpp_HDRS_DIR}/plugin_descriptor.h
+  ${qt_gui_cpp_HDRS_DIR}/plugin_provider.h
+  ${qt_gui_cpp_HDRS_DIR}/recursive_plugin_provider.h
+  ${qt_gui_cpp_HDRS_DIR}/ros_pluginlib_plugin_provider.h
+  ${qt_gui_cpp_HDRS_DIR}/ros_pluginlib_plugin_provider_for_plugin_providers.h
+  ${qt_gui_cpp_HDRS_DIR}/ros_pluginlib_plugin_provider_for_plugins.h
+  ${qt_gui_cpp_HDRS_DIR}/settings.h
 )
 
 # maintain context for different named target
@@ -31,7 +31,7 @@ set(qt_gui_cpp_sip_INCLUDE_DIRS ${qt_gui_cpp_INCLUDE_DIRS} "${CMAKE_CURRENT_SOUR
 set(qt_gui_cpp_sip_LIBRARY_DIRS ${qt_gui_cpp_LIBRARY_DIRS} lib)
 set(qt_gui_cpp_sip_LDFLAGS_OTHER ${qt_gui_cpp_LDFLAGS_OTHER})
 
-ament_get_recursive_properties(deps_include_dirs deps_libraries pluginlib::pluginlib)
+ament_get_recursive_properties(deps_include_dirs deps_libraries ${pluginlib_TARGETS})
 list(APPEND deps_include_dirs ${TinyXML2_INCLUDE_DIRS})
 list(APPEND deps_libraries ${TinyXML2_LIBRARIES})
 

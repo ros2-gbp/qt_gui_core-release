@@ -112,6 +112,4 @@ class PyDotFactoryTest(unittest.TestCase):
         # get rid of version specific whitespaces
         result = re.sub('[\n\t\r ]+', ' ', result)
         for sn in snippets:
-            self.assertTrue(
-                sn.lower() in result.lower(),
-                '%s \nmissing in\n %s' % (sn, result))
+            self.assertTrue(sn in result, '%s \nmissing in\n %s' % (sn, result))
