@@ -2,35 +2,10 @@
 Changelog for package qt_gui_cpp
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.9.3 (2026-03-20)
+2.7.6 (2026-03-30)
 ------------------
 
-2.9.2 (2025-10-09)
-------------------
-* Fix cmake deprecations (`#307 <https://github.com/ros-visualization/qt_gui_core/issues/307>`_) (`#310 <https://github.com/ros-visualization/qt_gui_core/issues/310>`_)
-* Contributors: mergify[bot]
-
-2.9.1 (2025-04-28)
-------------------
-* Use target_link_libraries instead of ament_target_dependencies (`#302 <https://github.com/ros-visualization/qt_gui_core/issues/302>`_)
-* Contributors: Shane Loretz
-
-2.9.0 (2024-12-20)
-------------------
-
-2.8.3 (2024-11-20)
-------------------
-
-2.8.2 (2024-07-10)
-------------------
-* Add common linters and make them happy to qt_gui_cpp (`#295 <https://github.com/ros-visualization/qt_gui_core/issues/295>`_)
-* Deprecated h headers (`#294 <https://github.com/ros-visualization/qt_gui_core/issues/294>`_)
-* Contributors: Alejandro Hernández Cordero
-
-2.8.1 (2024-06-25)
-------------------
-
-2.8.0 (2024-04-26)
+2.7.5 (2024-12-18)
 ------------------
 
 2.7.4 (2024-04-16)

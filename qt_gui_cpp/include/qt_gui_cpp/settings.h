@@ -30,14 +30,63 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef QT_GUI_CPP__SETTINGS_H_
-#define QT_GUI_CPP__SETTINGS_H_
+#ifndef qt_gui_cpp__Settings_H
+#define qt_gui_cpp__Settings_H
 
-// *INDENT-OFF* (prevent uncrustify from adding indention below)
-#warning Including header <qt_gui_cpp/settings.h> is deprecated, \
-include <qt_gui_cpp/settings.hpp> instead.
-// *INDENT-ON*
+#include "generic_proxy.h"
 
-#include "./settings.hpp"
+#include <QString>
+#include <QStringList>
+// Upstream issue: https://codereview.qt-project.org/c/qt/qtbase/+/272258
+#if __GNUC__ >= 9
+# pragma GCC diagnostic push
+# pragma GCC diagnostic ignored "-Wdeprecated-copy"
+#endif
+#include <QVariant>
+#if __GNUC__ >= 9
+# pragma GCC diagnostic pop
+#endif
 
-#endif  // QT_GUI_CPP__SETTINGS_H_
+namespace qt_gui_cpp
+{
+
+class Settings
+{
+
+public:
+
+  Settings(QObject* obj);
+
+  Settings getSettings(const QString& prefix);
+
+  QStringList allKeys() const;
+
+//  int beginReadArray(const QString& prefix);
+
+//  void beginWriteArray(const QString& prefix, int size = -1);
+
+  QStringList childGroups() const;
+
+  QStringList childKeys() const;
+
+  bool contains(const QString& key) const;
+
+//  void endArray();
+
+  void remove(const QString& key);
+
+//  void setArrayIndex(int i);
+
+  void setValue(const QString& key, const QVariant& value);
+
+  QVariant value(const QString& key, const QVariant& defaultValue = QVariant()) const;
+
+protected:
+
+  GenericProxy proxy_;
+
+};
+
+} // namespace
+
+#endif // qt_gui_cpp__Settings_H

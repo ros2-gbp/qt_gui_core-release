@@ -2,32 +2,12 @@
 Changelog for package qt_gui
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.9.3 (2026-03-20)
+2.7.6 (2026-03-30)
 ------------------
-* fix(qt_gui): __builtin_\_ -> builtins (`#315 <https://github.com/ros-visualization/qt_gui_core/issues/315>`_) (`#316 <https://github.com/ros-visualization/qt_gui_core/issues/316>`_)
+* fix(qt_gui): __builtin_\_ -> builtins (`#315 <https://github.com/ros-visualization/qt_gui_core/issues/315>`_) (`#317 <https://github.com/ros-visualization/qt_gui_core/issues/317>`_)
 * Contributors: mergify[bot]
 
-2.9.2 (2025-10-09)
-------------------
-* Fix cmake deprecations (`#307 <https://github.com/ros-visualization/qt_gui_core/issues/307>`_) (`#310 <https://github.com/ros-visualization/qt_gui_core/issues/310>`_)
-* Contributors: mergify[bot]
-
-2.9.1 (2025-04-28)
-------------------
-
-2.9.0 (2024-12-20)
-------------------
-
-2.8.3 (2024-11-20)
-------------------
-
-2.8.2 (2024-07-10)
-------------------
-
-2.8.1 (2024-06-25)
-------------------
-
-2.8.0 (2024-04-26)
+2.7.5 (2024-12-18)
 ------------------
 
 2.7.4 (2024-04-16)

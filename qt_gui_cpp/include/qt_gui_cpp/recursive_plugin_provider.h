@@ -30,14 +30,40 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef QT_GUI_CPP__RECURSIVE_PLUGIN_PROVIDER_H_
-#define QT_GUI_CPP__RECURSIVE_PLUGIN_PROVIDER_H_
+#ifndef qt_gui_cpp__RecursivePluginProvider_H
+#define qt_gui_cpp__RecursivePluginProvider_H
 
-// *INDENT-OFF* (prevent uncrustify from adding indention below)
-#warning Including header <qt_gui_cpp/recursive_plugin_provider.h> is deprecated, \
-include <qt_gui_cpp/recursive_plugin_provider.hpp> instead.
-// *INDENT-ON*
+#include "composite_plugin_provider.h"
+#include "ros_pluginlib_plugin_provider_for_plugin_providers.h"
 
-#include "./recursive_plugin_provider.hpp"
+#include <QList>
+#include <QMap>
+#include <QString>
 
-#endif  // QT_GUI_CPP__RECURSIVE_PLUGIN_PROVIDER_H_
+namespace qt_gui_cpp
+{
+
+class RecursivePluginProvider
+  : public CompositePluginProvider
+{
+
+public:
+
+  RecursivePluginProvider(RosPluginlibPluginProvider_ForPluginProviders* plugin_provider);
+
+  virtual ~RecursivePluginProvider();
+
+  virtual QMap<QString, QString> discover(QObject* discovery_data);
+
+  virtual void shutdown();
+
+private:
+
+  RosPluginlibPluginProvider_ForPluginProviders* plugin_provider_;
+  QList<PluginProvider*> providers_;
+
+};
+
+} // namespace
+
+#endif // qt_gui_cpp__RecursivePluginProvider_H
