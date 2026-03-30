@@ -1,3 +1,32 @@
+## qt_gui_core (jazzy) - 2.7.6-1
+
+The packages in the `qt_gui_core` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --rosdistro jazzy --track jazzy qt_gui_core` on `Mon, 30 Mar 2026 12:00:30 -0000`
+
+These packages were released:
+- `qt_dotgraph`
+- `qt_gui`
+- `qt_gui_app`
+- `qt_gui_core`
+- `qt_gui_cpp`
+- `qt_gui_py_common`
+
+Version of package(s) in repository `qt_gui_core`:
+
+- upstream repository: https://github.com/ros-visualization/qt_gui_core.git
+- release repository: https://github.com/ros2-gbp/qt_gui_core-release.git
+- rosdistro version: `2.7.5-1`
+- old version: `2.7.5-1`
+- new version: `2.7.6-1`
+
+Versions of tools used:
+
+- bloom version: `0.13.0`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## qt_gui_core (kilted) - 2.9.3-1
 
 The packages in the `qt_gui_core` repository were released into the `kilted` distro by running `/usr/bin/bloom-release --rosdistro kilted --track kilted qt_gui_core` on `Mon, 30 Mar 2026 11:46:09 -0000`
