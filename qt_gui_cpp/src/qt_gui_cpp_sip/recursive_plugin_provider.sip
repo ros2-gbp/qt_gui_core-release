@@ -5,7 +5,7 @@ class RecursivePluginProvider
   : qt_gui_cpp::CompositePluginProvider
 {
 %TypeHeaderCode
-#include <qt_gui_cpp/recursive_plugin_provider.h>
+#include <qt_gui_cpp/recursive_plugin_provider.hpp>
 %End
 
 public:
@@ -14,8 +14,9 @@ public:
 
   virtual ~RecursivePluginProvider();
 
-  virtual QMap<QString, QString> discover(QObject* discovery_data);
+  virtual QMultiMap<QString, QString> discover(QObject* discovery_data);
 
+  virtual void shutdown();
 };
 
 };

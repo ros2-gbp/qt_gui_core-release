@@ -4,7 +4,7 @@ namespace qt_gui_cpp
 class PluginProvider
 {
 %TypeHeaderCode
-#include <qt_gui_cpp/plugin_provider.h>
+#include <qt_gui_cpp/plugin_provider.hpp>
 %End
 
 public:
@@ -13,7 +13,7 @@ public:
 
   virtual ~PluginProvider();
 
-  virtual QMap<QString, QString> discover(QObject* discovery_data);
+  virtual QMultiMap<QString, QString> discover(QObject* discovery_data);
 
   /**
    * @attention Ownership of returned PluginDescriptor's is transfered to the caller

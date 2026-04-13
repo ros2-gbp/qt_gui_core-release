@@ -30,53 +30,52 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef qt_gui_cpp__PluginDescriptor_H
-#define qt_gui_cpp__PluginDescriptor_H
+#ifndef QT_GUI_CPP__COMPOSITE_PLUGIN_PROVIDER_HPP_
+#define QT_GUI_CPP__COMPOSITE_PLUGIN_PROVIDER_HPP_
 
+#include <QList>
 #include <QMap>
+#include <QSet>
 #include <QString>
-#include <QVector>
+
+#include "plugin_descriptor.hpp"
+#include "plugin_provider.hpp"
 
 namespace qt_gui_cpp
 {
 
-class PluginDescriptor
+class CompositePluginProvider
+  : public PluginProvider
 {
-
 public:
+  CompositePluginProvider(
+    const QList<PluginProvider *> & plugin_providers = QList<PluginProvider *>());
 
-  PluginDescriptor(const QString& plugin_id, const QMap<QString, QString>& attributes = (QMap<QString, QString>()));
+  virtual ~CompositePluginProvider();
 
-  const QString& pluginId() const;
+  /**
+   * @note The ownership of the plugin providers is transferred to the callee.
+   */
+  virtual void set_plugin_providers(const QList<PluginProvider *> & plugin_providers);
 
-  const QMap<QString, QString>& attributes() const;
+  virtual QList<PluginDescriptor *> discover_descriptors(QObject * discovery_data);
 
-  QMap<QString, QString>& attributes();
+  virtual void * load(const QString & plugin_id, PluginContext * plugin_context);
 
-  const QMap<QString, QString>& actionAttributes() const;
+  virtual Plugin * load_plugin(const QString & plugin_id, PluginContext * plugin_context);
 
-  void setActionAttributes(const QString& label, const QString& statustip = QString(), const QString& icon = QString(), const QString& icontype = QString());
+  virtual void unload(void * plugin_instance);
 
-  int countGroups() const;
+  virtual void shutdown();
 
-  QMap<QString, QString> group(int index) const;
+private:
+  QList<PluginProvider *> plugin_providers_;
 
-  void addGroupAttributes(const QString& label, const QString& statustip = QString(), const QString& icon = QString(), const QString& icontype = QString());
+  QMap<PluginProvider *, QSet<QString>> discovered_plugins_;
 
-  QMap<QString, QString> toDictionary() const;
-
-protected:
-
-  QString plugin_id_;
-
-  QMap<QString, QString> attributes_;
-
-  QMap<QString, QString> action_attributes_;
-
-  QVector<QMap<QString, QString> > groups_;
-
+  QMap<void *, PluginProvider *> running_plugins_;
 };
 
-} // namespace
+}  // namespace qt_gui_cpp
 
-#endif // qt_gui_cpp__PluginDescriptor_H
+#endif  // QT_GUI_CPP__COMPOSITE_PLUGIN_PROVIDER_HPP_

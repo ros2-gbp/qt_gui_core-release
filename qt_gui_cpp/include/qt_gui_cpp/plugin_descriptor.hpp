@@ -30,17 +30,54 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef qt_gui_cpp__RosPluginlibPluginProvider_ForPlugins_H
-#define qt_gui_cpp__RosPluginlibPluginProvider_ForPlugins_H
+#ifndef QT_GUI_CPP__PLUGIN_DESCRIPTOR_HPP_
+#define QT_GUI_CPP__PLUGIN_DESCRIPTOR_HPP_
 
-#include "plugin.h"
-#include "ros_pluginlib_plugin_provider.h"
+#include <QMap>
+#include <QString>
+#include <QVector>
 
 namespace qt_gui_cpp
 {
 
-typedef RosPluginlibPluginProvider<Plugin> RosPluginlibPluginProvider_ForPlugins;
+class PluginDescriptor
+{
+public:
+  PluginDescriptor(
+    const QString & plugin_id,
+    const QMap<QString, QString> & attributes = (QMap<QString, QString>()));
 
-} // namespace
+  const QString & pluginId() const;
 
-#endif // qt_gui_cpp__RosPluginlibPluginProvider_ForPlugins_H
+  const QMap<QString, QString> & attributes() const;
+
+  QMap<QString, QString> & attributes();
+
+  const QMap<QString, QString> & actionAttributes() const;
+
+  void setActionAttributes(
+    const QString & label, const QString & statustip = QString(),
+    const QString & icon = QString(), const QString & icontype = QString());
+
+  int countGroups() const;
+
+  QMap<QString, QString> group(int index) const;
+
+  void addGroupAttributes(
+    const QString & label, const QString & statustip = QString(),
+    const QString & icon = QString(), const QString & icontype = QString());
+
+  QMap<QString, QString> toDictionary() const;
+
+protected:
+  QString plugin_id_;
+
+  QMap<QString, QString> attributes_;
+
+  QMap<QString, QString> action_attributes_;
+
+  QVector<QMap<QString, QString>> groups_;
+};
+}  // namespace qt_gui_cpp
+
+#endif  // QT_GUI_CPP__PLUGIN_DESCRIPTOR_HPP_

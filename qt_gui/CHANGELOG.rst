@@ -2,23 +2,85 @@
 Changelog for package qt_gui
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.2.5 (2026-03-30)
-------------------
-* fix(qt_gui): __builtin_\_ -> builtins (`#315 <https://github.com/ros-visualization/qt_gui_core/issues/315>`_) (`#318 <https://github.com/ros-visualization/qt_gui_core/issues/318>`_)
-* Contributors: mergify[bot]
+2.10.4 (2026-04-13)
+-------------------
+* Support qt6 (`#293 <https://github.com/ros-visualization/qt_gui_core/issues/293>`_)
+* Contributors: Alejandro Hernández Cordero
 
-2.2.4 (2025-03-25)
-------------------
-
-2.2.3 (2024-01-24)
-------------------
-* (qt_gui) extended theme logic to get icons (`#280 <https://github.com/ros-visualization/qt_gui_core/issues/280>`_)
+2.10.3 (2026-03-30)
+-------------------
+* fix(qt_gui): __builtin_\_ -> builtins (`#315 <https://github.com/ros-visualization/qt_gui_core/issues/315>`_)
 * Contributors: Matthijs van der Burgh
 
-2.2.2 (2022-08-15)
+2.10.2 (2025-10-09)
+-------------------
+* Fix cmake deprecations (`#307 <https://github.com/ros-visualization/qt_gui_core/issues/307>`_)
+* Contributors: mosfet80
+
+2.10.1 (2025-05-19)
+-------------------
+
+2.10.0 (2025-04-28)
+-------------------
+
+2.9.1 (2025-04-28)
 ------------------
 
-2.2.1 (2022-05-10)
+2.9.0 (2024-12-20)
+------------------
+
+2.8.3 (2024-11-20)
+------------------
+
+2.8.2 (2024-07-10)
+------------------
+
+2.8.1 (2024-06-25)
+------------------
+
+2.8.0 (2024-04-26)
+------------------
+
+2.7.4 (2024-04-16)
+------------------
+
+2.7.3 (2024-03-28)
+------------------
+
+2.7.2 (2024-02-07)
+------------------
+* Remove unnecessary parentheses for assert. (`#286 <https://github.com/ros-visualization/qt_gui_core/issues/286>`_)
+* Contributors: Chris Lalancette
+
+2.7.1 (2023-12-26)
+------------------
+* (qt_gui) extended theme logic to get icons (`#279 <https://github.com/ros-visualization/qt_gui_core/issues/279>`_)
+* Contributors: Matthijs van der Burgh
+
+2.7.0 (2023-08-21)
+------------------
+
+2.6.0 (2023-06-07)
+------------------
+
+2.5.0 (2023-04-28)
+------------------
+
+2.4.1 (2023-04-11)
+------------------
+
+2.4.0 (2023-02-14)
+------------------
+
+2.3.2 (2022-11-02)
+------------------
+* Add in LICENSE file
+* Contributors: Chris Lalancette
+
+2.3.1 (2022-08-15)
+------------------
+
+2.3.0 (2022-05-10)
 ------------------
 * Fix flake8 errors introduced by the previous commit. (`#262 <https://github.com/ros-visualization/qt_gui_core/issues/262>`_)
 * Enable basic help information if no plugins are running (`#261 <https://github.com/ros-visualization/qt_gui_core/issues/261>`_)

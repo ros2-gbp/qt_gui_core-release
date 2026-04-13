@@ -1,4 +1,5 @@
-# Copyright (c) 2024, Open Source Robotics Foundation, Inc.
+# Copyright 2024 Open Source Robotics Foundation, Inc.
+# All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -26,6 +27,12 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+from ament_pep257.main import main
+import pytest
 
-find_package(python_qt_binding QUIET)
-set(qt_gui_cpp_USE_QT_MAJOR_VERSION "${python_qt_binding_QT_MAJOR_VERSION}")
+
+@pytest.mark.linter
+@pytest.mark.pep257
+def test_pep257():
+    rc = main(argv=[])
+    assert rc == 0, 'Found code style errors / warnings'

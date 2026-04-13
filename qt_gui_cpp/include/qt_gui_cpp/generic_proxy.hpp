@@ -30,17 +30,45 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef qt_gui_cpp__RosPluginlibPluginProvider_ForPluginProviders_H
-#define qt_gui_cpp__RosPluginlibPluginProvider_ForPluginProviders_H
+#ifndef QT_GUI_CPP__GENERIC_PROXY_HPP_
+#define QT_GUI_CPP__GENERIC_PROXY_HPP_
 
-#include "plugin_provider.h"
-#include "ros_pluginlib_plugin_provider.h"
+#include <QObject>
+
+#define Q_ARG_OLD(type, data) QArgument<type>(#type, data)
 
 namespace qt_gui_cpp
 {
 
-typedef RosPluginlibPluginProvider<PluginProvider> RosPluginlibPluginProvider_ForPluginProviders;
+class GenericProxy
+{
+public:
+  explicit GenericProxy(QObject * obj = 0);
 
-} // namespace
+  QObject * proxiedObject();
 
-#endif // qt_gui_cpp__RosPluginlibPluginProvider_ForPluginProviders_H
+  void setProxiedObject(QObject * obj);
+
+  bool invokeMethod(
+    const char * member, QGenericArgument val0 = QGenericArgument(),
+    QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(),
+    QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(),
+    QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(),
+    QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(),
+    QGenericArgument val9 = QGenericArgument());
+
+  bool invokeMethodWithReturn(
+    const char * member,
+    QGenericReturnArgument ret = QGenericReturnArgument(0, 0),
+    QGenericArgument val0 = QGenericArgument(), QGenericArgument val1 = QGenericArgument(),
+    QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(),
+    QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(),
+    QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(),
+    QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument());
+
+private:
+  QObject * object_;
+};
+}  // namespace qt_gui_cpp
+
+#endif  // QT_GUI_CPP__GENERIC_PROXY_HPP_

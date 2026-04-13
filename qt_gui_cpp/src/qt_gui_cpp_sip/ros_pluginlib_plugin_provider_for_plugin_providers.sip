@@ -6,7 +6,7 @@ class RosPluginlibPluginProvider_ForPluginProviders
   , qt_gui_cpp::PluginProvider
 {
 %TypeHeaderCode
-#include <qt_gui_cpp/ros_pluginlib_plugin_provider_for_plugin_providers.h>
+#include <qt_gui_cpp/ros_pluginlib_plugin_provider_for_plugin_providers.hpp>
 %End
 
 public:
@@ -17,7 +17,7 @@ public:
 
   virtual ~RosPluginlibPluginProvider_ForPluginProviders();
 
-  virtual QMap<QString, QString> discover(QObject* discovery_data);
+  virtual QMultiMap<QString, QString> discover(QObject* discovery_data);
 
   virtual QList<qt_gui_cpp::PluginDescriptor*> discover_descriptors(QObject* discovery_data);
 

@@ -30,52 +30,57 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef qt_gui_cpp__PluginBridge_H
-#define qt_gui_cpp__PluginBridge_H
+#ifndef QT_GUI_CPP__SETTINGS_HPP_
+#define QT_GUI_CPP__SETTINGS_HPP_
 
-#include <QObject>
+#include <QString>
+#include <QStringList>
+// Upstream issue: https://codereview.qt-project.org/c/qt/qtbase/+/272258
+#if __GNUC__ >= 9
+# pragma GCC diagnostic push
+# pragma GCC diagnostic ignored "-Wdeprecated-copy"
+#endif
+#include <QVariant>
+#if __GNUC__ >= 9
+# pragma GCC diagnostic pop
+#endif
+#include "generic_proxy.hpp"
 
 namespace qt_gui_cpp
 {
 
-class Plugin;
-class PluginContext;
-class PluginProvider;
-
-class PluginBridge
-  : public QObject
+class Settings
 {
-
-  Q_OBJECT
-
 public:
+  explicit Settings(QObject * obj);
 
-  PluginBridge();
+  Settings getSettings(const QString & prefix);
 
-  virtual bool load_plugin(PluginProvider* provider, const QString& plugin_id, PluginContext* plugin_context);
+  QStringList allKeys() const;
 
-  virtual void unload_plugin();
+//  int beginReadArray(const QString& prefix);
 
-  virtual bool has_configuration() const;
+//  void beginWriteArray(const QString& prefix, int size = -1);
 
-  virtual void trigger_configuration();
+  QStringList childGroups() const;
 
-public slots:
+  QStringList childKeys() const;
 
-  virtual void shutdown_plugin();
+  bool contains(const QString & key) const;
 
-  virtual void save_settings(QObject* plugin_settings, QObject* instance_settings);
+//  void endArray();
 
-  virtual void restore_settings(QObject* plugin_settings, QObject* instance_settings);
+  void remove(const QString & key);
 
-private:
+//  void setArrayIndex(int i);
 
-  PluginProvider* provider_;
+  void setValue(const QString & key, const QVariant & value);
 
-  Plugin* plugin_;
+  QVariant value(const QString & key, const QVariant & defaultValue = QVariant()) const;
 
+protected:
+  GenericProxy proxy_;
 };
+}  // namespace qt_gui_cpp
 
-} // namespace
-
-#endif // qt_gui_cpp__PluginBridge_H
+#endif  // QT_GUI_CPP__SETTINGS_HPP_

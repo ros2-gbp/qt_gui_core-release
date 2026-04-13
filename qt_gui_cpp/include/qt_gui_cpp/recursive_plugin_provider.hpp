@@ -30,48 +30,34 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef qt_gui_cpp__PluginProvider_H
-#define qt_gui_cpp__PluginProvider_H
-
-#include "plugin.h"
-#include "plugin_context.h"
-#include "plugin_descriptor.h"
+#ifndef QT_GUI_CPP__RECURSIVE_PLUGIN_PROVIDER_HPP_
+#define QT_GUI_CPP__RECURSIVE_PLUGIN_PROVIDER_HPP_
 
 #include <QList>
-#include <QMap>
+#include <QMultiMap>
 #include <QString>
+
+#include "composite_plugin_provider.hpp"
+#include "ros_pluginlib_plugin_provider_for_plugin_providers.hpp"
 
 namespace qt_gui_cpp
 {
 
-class PluginProvider
+class RecursivePluginProvider
+  : public CompositePluginProvider
 {
-
 public:
+  explicit RecursivePluginProvider(RosPluginlibPluginProvider_ForPluginProviders * plugin_provider);
 
-  PluginProvider();
+  virtual ~RecursivePluginProvider();
 
-  virtual ~PluginProvider();
-
-  virtual QMap<QString, QString> discover(QObject* discovery_data);
-
-  /**
-   * @attention Ownership of returned PluginDescriptor's is transfered to the caller
-   */
-  virtual QList<PluginDescriptor*> discover_descriptors(QObject* discovery_data);
-
-  virtual void* load(const QString& plugin_id, PluginContext* plugin_context);
-
-  virtual Plugin* load_plugin(const QString& plugin_id, PluginContext* plugin_context);
-
-  virtual void unload(void* plugin_instance);
-
-  virtual void unload_plugin(Plugin* plugin_instance);
+  virtual QMultiMap<QString, QString> discover(QObject * discovery_data);
 
   virtual void shutdown();
 
+private:
+  RosPluginlibPluginProvider_ForPluginProviders * plugin_provider_;
+  QList<PluginProvider *> providers_;
 };
-
-} // namespace
-
-#endif // qt_gui_cpp__PluginProvider_H
+}  // namespace qt_gui_cpp
+#endif  // QT_GUI_CPP__RECURSIVE_PLUGIN_PROVIDER_HPP_

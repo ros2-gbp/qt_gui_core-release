@@ -30,63 +30,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef qt_gui_cpp__Settings_H
-#define qt_gui_cpp__Settings_H
+#ifndef QT_GUI_CPP__ROS_PLUGINLIB_PLUGIN_PROVIDER_FOR_PLUGINS_HPP_
+#define QT_GUI_CPP__ROS_PLUGINLIB_PLUGIN_PROVIDER_FOR_PLUGINS_HPP_
 
-#include "generic_proxy.h"
-
-#include <QString>
-#include <QStringList>
-// Upstream issue: https://codereview.qt-project.org/c/qt/qtbase/+/272258
-#if __GNUC__ >= 9
-# pragma GCC diagnostic push
-# pragma GCC diagnostic ignored "-Wdeprecated-copy"
-#endif
-#include <QVariant>
-#if __GNUC__ >= 9
-# pragma GCC diagnostic pop
-#endif
+#include "plugin.hpp"
+#include "ros_pluginlib_plugin_provider.hpp"
 
 namespace qt_gui_cpp
 {
 
-class Settings
-{
+typedef RosPluginlibPluginProvider<Plugin> RosPluginlibPluginProvider_ForPlugins;
 
-public:
+}  // namespace qt_gui_cpp
 
-  Settings(QObject* obj);
-
-  Settings getSettings(const QString& prefix);
-
-  QStringList allKeys() const;
-
-//  int beginReadArray(const QString& prefix);
-
-//  void beginWriteArray(const QString& prefix, int size = -1);
-
-  QStringList childGroups() const;
-
-  QStringList childKeys() const;
-
-  bool contains(const QString& key) const;
-
-//  void endArray();
-
-  void remove(const QString& key);
-
-//  void setArrayIndex(int i);
-
-  void setValue(const QString& key, const QVariant& value);
-
-  QVariant value(const QString& key, const QVariant& defaultValue = QVariant()) const;
-
-protected:
-
-  GenericProxy proxy_;
-
-};
-
-} // namespace
-
-#endif // qt_gui_cpp__Settings_H
+#endif  // QT_GUI_CPP__ROS_PLUGINLIB_PLUGIN_PROVIDER_FOR_PLUGINS_HPP_

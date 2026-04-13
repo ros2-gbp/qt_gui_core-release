@@ -30,36 +30,50 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef qt_gui_cpp__RecursivePluginProvider_H
-#define qt_gui_cpp__RecursivePluginProvider_H
+#ifndef QT_GUI_CPP__PLUGIN_BRIDGE_HPP_
+#define QT_GUI_CPP__PLUGIN_BRIDGE_HPP_
 
-#include "composite_plugin_provider.h"
-#include "ros_pluginlib_plugin_provider_for_plugin_providers.h"
-
-#include <QMap>
-#include <QString>
+#include <QObject>
 
 namespace qt_gui_cpp
 {
 
-class RecursivePluginProvider
-  : public CompositePluginProvider
+class Plugin;
+class PluginContext;
+class PluginProvider;
+
+class PluginBridge
+  : public QObject
 {
+  Q_OBJECT
 
 public:
+  PluginBridge();
 
-  RecursivePluginProvider(RosPluginlibPluginProvider_ForPluginProviders* plugin_provider);
+  virtual ~PluginBridge();
 
-  virtual ~RecursivePluginProvider();
+  virtual bool load_plugin(
+    PluginProvider * provider, const QString & plugin_id,
+    PluginContext * plugin_context);
 
-  virtual QMap<QString, QString> discover(QObject* discovery_data);
+  virtual void unload_plugin();
+
+  virtual bool has_configuration() const;
+
+  virtual void trigger_configuration();
+
+public slots:
+  virtual void shutdown_plugin();
+
+  virtual void save_settings(QObject * plugin_settings, QObject * instance_settings);
+
+  virtual void restore_settings(QObject * plugin_settings, QObject * instance_settings);
 
 private:
+  PluginProvider * provider_;
 
-  RosPluginlibPluginProvider_ForPluginProviders* plugin_provider_;
-
+  Plugin * plugin_;
 };
+}  // namespace qt_gui_cpp
 
-} // namespace
-
-#endif // qt_gui_cpp__RecursivePluginProvider_H
+#endif  // QT_GUI_CPP__PLUGIN_BRIDGE_HPP_
