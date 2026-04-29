@@ -1,0 +1,12 @@
+Source: ros-lyrical-qt-gui-core
+Section: misc
+Priority: optional
+Maintainer: Dirk Thomas <dthomas@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/qt_gui_core/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-qt-gui-core
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-qt-dotgraph (>= 0.3.0), ros-lyrical-qt-gui (>= 0.3.0), ros-lyrical-qt-gui-app (>= 0.3.0), ros-lyrical-qt-gui-cpp (>= 0.3.0), ros-lyrical-qt-gui-py-common (>= 0.3.0), ros-lyrical-ros-workspace
+Description: Integration of the ROS package system and ROS-specific plugins for a Qt-based GUI.
