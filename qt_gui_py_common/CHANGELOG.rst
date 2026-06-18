@@ -2,15 +2,15 @@
 Changelog for package qt_gui_py_common
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.0.1 (2026-06-18)
-------------------
-* Removed dead code, Python 2 to 3 modernization and other fixes (`#333 <https://github.com/ros-visualization/qt_gui_core/issues/333>`_)
-* Contributors: Alejandro Hernández Cordero
+2.11.1 (2026-06-18)
+-------------------
+* Removed dead code, Python 2 to 3 modernization and other fixes (`#333 <https://github.com/ros-visualization/qt_gui_core/issues/333>`_) (`#338 <https://github.com/ros-visualization/qt_gui_core/issues/338>`_)
+* Contributors: mergify[bot]
 
-3.0.0 (2026-05-06)
-------------------
-* More qt6 fixes (`#334 <https://github.com/ros-visualization/qt_gui_core/issues/334>`_)
-* Contributors: Alejandro Hernández Cordero
+2.11.0 (2026-05-06)
+-------------------
+* More qt6 fixes (`#334 <https://github.com/ros-visualization/qt_gui_core/issues/334>`_) (`#335 <https://github.com/ros-visualization/qt_gui_core/issues/335>`_)
+* Contributors: mergify[bot]
 
 2.10.7 (2026-04-27)
 -------------------
