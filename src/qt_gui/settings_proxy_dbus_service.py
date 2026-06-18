@@ -35,7 +35,7 @@ class SettingsProxyDBusService(dbus.service.Object):
     """DBus service of a 'Settings' instance."""
 
     def __init__(self, object_path):
-        super(SettingsProxyDBusService, self).__init__(object_path)
+        super().__init__(object_path)
         self._settings_proxy = None
         self._group = None
 
@@ -88,9 +88,4 @@ class SettingsProxyDBusService(dbus.service.Object):
             value = float(value)
         elif isinstance(value, dbus.String):
             value = str(value)
-        elif isinstance(value, dbus.UTF8String):
-            try:
-                value = unicode(value)
-            except NameError:
-                value = str(value)
         return value
