@@ -2,17 +2,23 @@
 Changelog for package qt_gui_cpp
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.11.1 (2026-06-18)
--------------------
-* Removed dead code, Python 2 to 3 modernization and other fixes (`#333 <https://github.com/ros-visualization/qt_gui_core/issues/333>`_) (`#338 <https://github.com/ros-visualization/qt_gui_core/issues/338>`_)
-* Contributors: mergify[bot]
+3.0.2 (2026-07-09)
+------------------
+* Fix Settings::remove() reading uninitialized bool and never invoking the proxied method (`#342 <https://github.com/ros-visualization/qt_gui_core/issues/342>`_)
+* Removed dead code (`#341 <https://github.com/ros-visualization/qt_gui_core/issues/341>`_)
+* Modernize qt_gui_cpp toward C++20 (`#340 <https://github.com/ros-visualization/qt_gui_core/issues/340>`_)
+* Use smart ptr with class loader (`#339 <https://github.com/ros-visualization/qt_gui_core/issues/339>`_)
+* Contributors: Alejandro Hernández Cordero
 
-2.11.0 (2026-05-06)
+3.0.1 (2026-06-18)
+------------------
+* Removed dead code, Python 2 to 3 modernization and other fixes (`#333 <https://github.com/ros-visualization/qt_gui_core/issues/333>`_)
+* Contributors: Alejandro Hernández Cordero
+
+3.0.0 (2026-05-06)
 -------------------
-* More qt6 fixes (`#334 <https://github.com/ros-visualization/qt_gui_core/issues/334>`_) (`#335 <https://github.com/ros-visualization/qt_gui_core/issues/335>`_)
-  (cherry picked from commit 62f29544c4061006f9c09c3dfa4bf2895e8126e0)
-  Co-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>
-* Contributors: mergify[bot]
+* More qt6 fixes (`#334 <https://github.com/ros-visualization/qt_gui_core/issues/334>`_)
+* Contributors: Alejandro Hernández Cordero
 
 2.10.7 (2026-04-27)
 -------------------
